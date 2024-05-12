@@ -1,0 +1,16 @@
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!-- Appenders -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>D:\ECommerce App\logs\coupon-service.log</file> <!-- Specify the file path -->
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] - %msg%n</pattern> <!-- Define log format -->
+        </encoder>
+    </appender>
+
+    <!-- Loggers -->
+    <root level="INFO">
+        <appender-ref ref="FILE"/> <!-- Attach appender to the root logger -->
+    </root>
+</configuration>

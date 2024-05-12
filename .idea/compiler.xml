@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Order-Service" />
+        <module name="Coupon-Service" />
+        <module name="Common-Api-Gateway" />
+        <module name="Service-Registry" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Common-Api-Gateway" target="17" />
+      <module name="Coupon-Service" target="17" />
+      <module name="Order-Service" target="17" />
+      <module name="Service-Registry" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Common-Api-Gateway" options="-parameters" />
+      <module name="Coupon-Service" options="-parameters" />
+      <module name="Order-Service" options="-parameters" />
+      <module name="Service-Registry" options="-parameters" />
+    </option>
+  </component>
+</project>

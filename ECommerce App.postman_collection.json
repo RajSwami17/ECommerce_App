@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "e0bc1edf-3b0f-4f29-a8c5-d1feea054818",
+		"name": "ECommerce App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24456991",
+		"_collection_link": "https://gold-escape-851569.postman.co/workspace/SpringbootProjects~383f23a7-dd7e-46af-994f-47664b38444d/collection/24456991-e0bc1edf-3b0f-4f29-a8c5-d1feea054818?action=share&source=collection_link&creator=24456991"
+	},
+	"item": [
+		{
+			"name": "Create Coupon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"discount\": 20,\r\n    \"expirationDate\": \"2024-02-13\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8082/api/coupon/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Coupons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8082/api/coupon/getallcoupons"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Coupon By Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8082/api/coupon/A7E8D5AE"
+			},
+			"response": []
+		},
+		{
+			"name": "Order Cancel By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:8081/api/order/1/cancel"
+			},
+			"response": []
+		},
+		{
+			"name": "Place Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item\": \"Book\",\r\n    \"price\": 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/order/place?couponCode=C0350E59",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"order",
+						"place"
+					],
+					"query": [
+						{
+							"key": "couponCode",
+							"value": "C0350E59"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8081/api/order/1"
+			},
+			"response": []
+		}
+	]
+}
